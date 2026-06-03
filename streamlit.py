@@ -412,18 +412,21 @@ Apakah distribusi kelas sudah balanced?
     balanced_splits = {
         "Train": os.path.join(
             BASE_DIR,
+            "TIM DATA SCIENCE FIX",
             "BISINDO-Augmented-Balanced",
             "train",
             "images"
         ),
         "Valid": os.path.join(
             BASE_DIR,
+            "TIM DATA SCIENCE FIX",
             "BISINDO-Augmented-Balanced",
             "valid",
             "images"
         ),
         "Test": os.path.join(
             BASE_DIR,
+            "TIM DATA SCIENCE FIX",
             "BISINDO-Augmented-Balanced",
             "test",
             "images"
@@ -436,9 +439,14 @@ Apakah distribusi kelas sudah balanced?
         key="bal"
     )
 
-    counts2 = count_per_class(
-        balanced_splits[split2]
-    )
+    balanced_path = balanced_splits[split2]
+
+    if not os.path.exists(balanced_path):
+        st.warning("Folder data balanced belum ditemukan.")
+        st.code(balanced_path)
+        st.stop()
+
+    counts2 = count_per_class(balanced_path)
 
     df2 = pd.DataFrame(
         counts2.items(),
