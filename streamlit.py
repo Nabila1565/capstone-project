@@ -24,20 +24,22 @@ st.markdown("Analisis Dataset BISINDO berdasarkan pertanyaan eksplorasi data (ED
 # ======================================================
 # DATASET PATH
 # ======================================================
-
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-st.write("BASE_DIR:", BASE_DIR)
+DATASET_DIR = os.path.join(
+    BASE_DIR,
+    "TIM DATA SCIENCE FIX",
+    "BISINDO-Dataset-1"
+)
 
+st.write("BASE_DIR:", BASE_DIR)
 st.write("Isi root project:")
 st.write(os.listdir(BASE_DIR))
 
-DATASET_DIR = os.path.join(BASE_DIR, "TIM DATA SCIENCE FIX", "BISINDO-Dataset-1")
+st.write("Dataset exists:", os.path.exists(DATASET_DIR))
 
-st.write("Dataset exists:", os.path.exists(dataset_root))
-
-if os.path.exists(dataset_root):
-    st.write(os.listdir(dataset_root))
+if os.path.exists(DATASET_DIR):
+    st.write(os.listdir(DATASET_DIR))
 
 splits = {
     "Train": os.path.join(DATASET_DIR, "train", "images"),
