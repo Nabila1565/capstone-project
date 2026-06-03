@@ -32,15 +32,6 @@ DATASET_DIR = os.path.join(
     "BISINDO-Dataset-1"
 )
 
-st.write("BASE_DIR:", BASE_DIR)
-st.write("Isi root project:")
-st.write(os.listdir(BASE_DIR))
-
-st.write("Dataset exists:", os.path.exists(DATASET_DIR))
-
-if os.path.exists(DATASET_DIR):
-    st.write(os.listdir(DATASET_DIR))
-
 splits = {
     "Train": os.path.join(DATASET_DIR, "train", "images"),
     "Valid": os.path.join(DATASET_DIR, "valid", "images"),
