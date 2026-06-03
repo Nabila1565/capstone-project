@@ -128,6 +128,14 @@ if menu == "🏠 Overview":
 
     st.header("Overview Dataset")
 
+    missing_paths = [p for p in splits.values() if not os.path.exists(p)]
+
+    if missing_paths:
+        st.error("Folder dataset tidak ditemukan:")
+        for p in missing_paths:
+            st.code(p)
+        st.stop()
+
     total_images = 0
 
     for p in splits.values():
