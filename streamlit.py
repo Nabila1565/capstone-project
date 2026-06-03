@@ -32,7 +32,7 @@ st.write("BASE_DIR:", BASE_DIR)
 st.write("Isi root project:")
 st.write(os.listdir(BASE_DIR))
 
-dataset_root = os.path.join(BASE_DIR, "BISINDO-Dataset-1")
+DATASET_DIR = os.path.join(BASE_DIR, "TIM DATA SCIENCE FIX", "BISINDO-Dataset-1")
 
 st.write("Dataset exists:", os.path.exists(dataset_root))
 
@@ -40,9 +40,9 @@ if os.path.exists(dataset_root):
     st.write(os.listdir(dataset_root))
 
 splits = {
-    "Train": os.path.join(BASE_DIR, "BISINDO-Dataset-1", "train", "images"),
-    "Valid": os.path.join(BASE_DIR, "BISINDO-Dataset-1", "valid", "images"),
-    "Test": os.path.join(BASE_DIR, "BISINDO-Dataset-1", "test", "images")
+    "Train": os.path.join(DATASET_DIR, "train", "images"),
+    "Valid": os.path.join(DATASET_DIR, "valid", "images"),
+    "Test": os.path.join(DATASET_DIR, "test", "images")
 }
 # ======================================================
 # FUNCTIONS
