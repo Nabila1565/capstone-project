@@ -20,16 +20,17 @@ st.set_page_config(
 
 st.title("🤟 Dashboard Exploratory Data Analysis (EDA) Dataset BISINDO")
 st.markdown("Analisis Dataset BISINDO berdasarkan pertanyaan eksplorasi data (EDA).")
-
 # ======================================================
 # DATASET PATH
 # ======================================================
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 st.write("BASE_DIR:", BASE_DIR)
 
 st.write("Isi root project:")
 st.write(os.listdir(BASE_DIR))
+
 dataset_root = os.path.join(BASE_DIR, "BISINDO-Dataset-1")
 
 st.write("Dataset exists:", os.path.exists(dataset_root))
@@ -42,7 +43,6 @@ splits = {
     "Valid": os.path.join(BASE_DIR, "BISINDO-Dataset-1", "valid", "images"),
     "Test": os.path.join(BASE_DIR, "BISINDO-Dataset-1", "test", "images")
 }
-
 # ======================================================
 # FUNCTIONS
 # ======================================================
