@@ -42,7 +42,8 @@ if os.path.exists(dataset_root):
 splits = {
     "Train": os.path.join(BASE_DIR, "BISINDO-Dataset-1", "train", "images"),
     "Valid": os.path.join(BASE_DIR, "BISINDO-Dataset-1", "valid", "images"),
-    "Test": os.path.join(BASE_DIR
+    "Test": os.path.join(BASE_DIR, "BISINDO-Dataset-1", "test", "images")
+}
 # ======================================================
 # FUNCTIONS
 # ======================================================
